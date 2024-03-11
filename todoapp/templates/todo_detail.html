@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block main_block%}
+
+{%block title_block%}
+
+    <title>Todos Detail</title>
+        
+{%endblock%}
+
+
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 400px;">
+       
+  <div class="card" style="width: 18rem;">
+      <div class="card-header">
+        ToDo Detail
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{data.tittle|upper}}</li>
+        <li class="list-group-item">{{data.created_date|date:"D d M Y"}}</li>
+        <li class="list-group-item">{{data.user}}</li>
+        <li class="list-group-item">{{data.status|capfirst}}</li>
+
+      </ul>
+    </div>
+
+</div>
+
+
+
+{%endblock%}
